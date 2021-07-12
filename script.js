@@ -37,7 +37,7 @@ function addToCart(event){
     cartContainer.append(itemContainer)
     count++;
 
-
+    Cakes.push(btnParent.children[0].innerText);
 
 
     // Accessing individual quantity fields
@@ -88,6 +88,7 @@ function grandTotal(){
     grand_total.children[0].innerText = "$"+total
     grand_total.children[0].style.fontWeight = 'bold'
     console.log(total)
+    tot=total;
 }
 
 

@@ -18,11 +18,13 @@ firebase.auth.Auth.Persistence.Local
 var db = firebase.firestore();
 
 
-
+var Cakes=[];
+var tot;
 /******************************tesssssssssssssssssssssssssssssssssssst database*/
 
 $("#db").click(function()
 {
+    /*
     firebase.auth().createUserWithEmailAndPassword("email123@gmail.com", "password");
     
       // Add a new document in collection "cities"
@@ -30,6 +32,33 @@ $("#db").click(function()
         name: "Los Angeles",
         state: "CA",
         country: "USA"
+    })
+    .then(() => {
+        console.log("Document successfully written!");
+    })*/
+    db.collection("Cake").add({
+        CakeName: "שנייק וניל",
+        CakePrice: "40 shekels",
+    })
+    db.collection("Cake").add({
+        CakeName: "רוגלעך חלבי מושחט",
+        CakePrice: "50 shekel",
+    })
+    db.collection("Cake").add({
+        CakeName: "רוגלעך קלאסי",
+        CakePrice: "40 shekel",
+    })
+    db.collection("Cake").add({
+        CakeName: "שבלול קינמון",
+        CakePrice: "30 shekel",
+    })
+    db.collection("Cake").add({
+        CakeName: "מבצע!! 2 מארזים רוגלעך קלאסי ב50 שח",
+        CakePrice: "50 שח",
+    })
+    db.collection("Cake").add({
+        CakeName: "עוגת גבינה וחמאה",
+        CakePrice: "40 shekel",
     })
     .then(() => {
         console.log("Document successfully written!");
@@ -45,16 +74,18 @@ $("#db").click(function()
 $("#buy").click(function()
 {
     var today = new Date();
-    db.collection("date").doc().set({
-        date: today,
-        count:count
-    })
-    .then(() => {
-        console.log("Document successfully written!");
-    })
-    .catch((error) => {
-        console.error("Error writing document: ", error);
-    });
+     db.collection("Order").doc().set({
+         CakeName:Cakes,
+         Price:tot,
+         date: today,
+         count:count
+     })
+     .then(() => {
+         console.log("Document successfully written!");
+     })
+     .catch((error) => {
+         console.error("Error writing document: ", error);
+     });
         
 
 
