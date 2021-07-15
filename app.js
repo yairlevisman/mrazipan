@@ -1,18 +1,8 @@
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const firebaseConfig = {
-    apiKey: "AIzaSyA6J1yn7QbgSUoOKL9Db2Yl1bQzTWLqEkg",
-    authDomain: "marzipan-c28d0.firebaseapp.com",
-    projectId: "marzipan-c28d0",
-    storageBucket: "marzipan-c28d0.appspot.com",
-    messagingSenderId: "824381130066",
-    appId: "1:824381130066:web:0028428af2383b1bd3a68b",
-    measurementId: "G-4SSBNSZC6C"
-  };
-
 firebase.initializeApp(firebaseConfig);
-
+console.log('wwww',firebaseConfig);
 firebase.auth.Auth.Persistence.Local
 
 var db = firebase.firestore();
