@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    function setColor(btn, color){
-        var count=1;
-        var property = document.getElementById("style1");
-        if (count == 0){
-            property.style.backgroundColor = "#FFFFFF"
-            count=1;        
-        }
-        else{
-            property.style.backgroundColor = "#7FFF00"
-            count=0;
-        }
-    
-    }
-    /*onclick="setColor('button', '#101010')"*/
-    </script>
 <head>
-
-
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
   
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -52,112 +34,17 @@
     <script src="jquery-2.2.3.js"></script>
 </head>
 <body>
-  <!---  "date"
-  <p id="p1"></p>
-  <script>
 
-    var today = new Date();
-    
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    document.getElementById("p1").innerHTML=date;
-    </script>
-  -->
 
     <nav class="navbar navbar-dark bg-dark" style = 'height: 100px'>
         <div class="container-fluid">
           <h2  style = 'color: white'>Wellcome to Mrazipan</h2>
-         <li><button id="db" class="myButton" type="button">database</button></li>
+         <li><button id="db2" class="myButton" type="button">Graphs Page</button></li>
         </div>
       </nav>
       
       <div class = 'container'>
           <div class = 'row'>
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/brwonize.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">בראוניז</h3>
-                      <h4 class="card-text">$100</h4>
-                      <a  id="style1" class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/עוגת באונו(משלוב עם אגוזי לוז וחמאה).jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">עוגת באונו(משלוב עם אגוזי לוז וחמאה)</h3>
-                      <h4 class="card-text">$80</h4>
-                      <a  id="style1" class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/שנייק וניל (קרם פסטייר עם שוקלד צ'יפס).jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">שנייק וניל (קרם פסטייר עם שוקלד צ'יפס)</h3>
-                      <h4 class="card-text">$50</h4>
-                      <a id="style1" class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-
-            
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/רוגלעך חלבי מושחט.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">רוגלעך חלבי מושחט</h3>
-                      <h4 class="card-text">$100</h4>
-                      <a id="style1" class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/רוגלעך קלאסי.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">רוגלעך קלאסי</h3>
-                      <h4 class="card-text">$30</h4>
-                      <a  id="style1" class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/שבלול קינמון.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">שבלול קינמון</h3>
-                      <h4 class="card-text">$100</h4>
-                      <a id="style1"  class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/מבצע!! 2 מארזים רוגלעך קלאסי ב50 שח.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">מבצע!! 2 מארזים רוגלעך קלאסי ב50 שח</h3>
-                      <h4 class="card-text">$100</h4>
-                      <a  id="style1" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
-              <div class = 'col-md-4 col-lg-4'>
-                <div class="card" style="width: 18rem;">
-                    <img class="img" src="images/עוגת גבינה וחמאה- חדש !!.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h3 class="card-title">עוגת גבינה וחמאה- חדש !!</h3>
-                      <h4 class="card-text">$100</h4>
-                      <a id="style1" class="btn btn-primary" >Add to Cart</a>
-                    </div>
-                  </div>
-              </div>
 
           </div>
       </div>
@@ -176,22 +63,8 @@
                 </tr>
             </thead>
             <tbody>
-            <!--    <tr>
-                    <td><input class="uk-checkbox" type="checkbox"></td>
-                    <td><img class="uk-preserve-width uk-border-circle" src="img/strawberry_cake.jpg" width="40" alt=""></td>
-                    <td class="uk-table-link">
-                        <h3 class = "item-name">Strawberry Cake</h3>
-                    </td>
-                    <td class="uk-text-truncate item-price"><h3>$100</h3></td>
-                    <td><input type = 'number' class = 'num' value = '1'></td>
-                    <td class="uk-text-truncate total-price"><h3>$100</h3></td>
-                    <td><button class="uk-button uk-button-danger" type="button">Remove</button></td>
-                </tr>
-          
-              -->
             </tbody>
             <tr>
-            <!---  <td><input class="uk-checkbox" type="checkbox"></td>-->
               <td><img class="uk-preserve-width uk-border-circle"  width="40" alt=""></td>
               <td class="uk-table-link">
                   <h3 class = "item-name"><strong>Grand-Total</strong></h3>
@@ -201,13 +74,15 @@
               <td class="uk-text-truncate grand-total"><h3><strong>$0</strong></h3></td>
               <td><button id="buy" class="myButton" type="button">Buy</button></td>
               
-              <div id="myChart"></div>
+              
           </tr>
         </table>
     </div>
+    <script src='d3.min.js'></script>
     <script  src = 'env.js'></script>
+    <script src = 'script.js'></script>
     <script  src = 'app.js'></script>
-      <script src = 'script.js'></script>
+  
 </body>
 </html>
 

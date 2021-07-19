@@ -2,24 +2,28 @@ let addToCartButtons = document.getElementsByClassName('btn-primary')
 let cartContainer = document.getElementsByTagName('tbody')[0]
 let quantityFields = document.getElementsByClassName('num')
 let delete_buttons = document.getElementsByClassName('uk-button-danger')
-var count=0;
-
+var count1=0
+var testEvent=0
 // picking up all the Add-To-Cart buttons
 for(let i = 0; i < addToCartButtons.length; i++){
+    testEvent=1;
     addToCartButtons[i].addEventListener('click', addToCart)
+    console.log(addToCartButtons[i])
+   //addToCartButtons[i].on("click",addToCart)
     
 }
+
 // This function helps to add items to our cart
 function addToCart(event){
 
-    
+    testEvent=1;
     let itemContainer = document.createElement('tr')
     let btn = event.target
-    let btnGrandParent = btn.parentElement.parentElement
+    let btnGrandParent = btn.parentElement.parentElement.parentElement
     let btnParent = btn.parentElement
-    let itemImage = btnGrandParent.children[0].src
-    let itemName = btnParent.children[0].innerText
-    let itemPrice = btnParent.children[1].innerText
+    let itemImage = btnGrandParent.children[0].children[0].children[0].src
+    let itemName = btnParent.children[1].innerText
+    let itemPrice = btnParent.children[2].innerText
     
     
     itemContainer.innerHTML = `
@@ -35,9 +39,9 @@ function addToCart(event){
 `
 
     cartContainer.append(itemContainer)
-    count++;
+    count1++;
 
-    Cakes.push(btnParent.children[0].innerText);
+   Cakes.push(btnParent.children[1].innerText);
 
 
     // Accessing individual quantity fields
